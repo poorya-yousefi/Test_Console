@@ -1,9 +1,8 @@
 namespace ConsoleApp_Test;
 
-public class WorkWithPaths
+public class WorkWithPaths : IWorker
 {
-
-    public static void Test()
+    public override void Test()
     {
         MakeDir();
     }
@@ -25,7 +24,7 @@ public class WorkWithPaths
         var currentDirectory = Directory.GetCurrentDirectory();
         var storesDirectory = Path.Combine(currentDirectory, "stores");
 
-        var salesFiles = WorkWithPaths.FindFiles(storesDirectory);
+        var salesFiles = FindFiles(storesDirectory);
 
         foreach (var file in salesFiles)
         {

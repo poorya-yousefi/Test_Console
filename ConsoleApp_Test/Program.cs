@@ -1,3 +1,10 @@
 ﻿using ConsoleApp_Test;
 
-WorkWithPaths.Test();
+IWorker tester;
+
+tester = new WorkWithFiles();
+tester.InvokeTest();
+
+
+tester = new WorkWithPaths();
+tester.InvokeTest();
