@@ -1,0 +1,33 @@
+@WebApplicationTest_HostAddress = http://localhost:5133
+
+GET {{WebApplicationTest_HostAddress}}/weatherforecast/
+Accept: application/json
+
+### Create a new user
+POST {{WebApplicationTest_HostAddress}}/api/user
+Content-Type: application/json
+
+{
+  "name": "Poorya Yousefi",
+  "email": "p.you@example.com"
+}
+
+### Get all users
+GET {{WebApplicationTest_HostAddress}}/api/user
+
+### Get a specific user by ID
+GET {{WebApplicationTest_HostAddress}}/api/user/1
+
+### Update a user
+PUT {{WebApplicationTest_HostAddress}}/api/user/1
+Content-Type: application/json
+
+{
+  "name": "Poorya Updated",
+  "email": "p.updated@example.com"
+}
+
+### Delete a user
+DELETE {{WebApplicationTest_HostAddress}}/api/user/1
+
+###
